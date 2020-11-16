@@ -1,3 +1,6 @@
+import time
+
+
 class Payments:
 
     def __init__(self, gateway):
@@ -27,6 +30,7 @@ class Payments:
                     gateway.process_payment(data)
                     return True
 
+                time.sleep(0.5)
             except Exception as e:
                 print(e)
 
